@@ -119,7 +119,7 @@
   "Take `action` from `state`.
   Returns a map with the next state, the reward, and a `done` flag."
   [world state action]
-  (let [next (-> state (move world action) (wind-push world))
+  (let [next (wind-push world (move world state action))
         rewards (:rewards world)
         goal? (goal? world next)
         hazard? (hazard? world next)
@@ -188,7 +188,7 @@
               "start position is a wall")
             (when (and (:start world) (terminal? world (:start world)))
               "start position must not be a goal or a hazard")
-            (when-not (some goal? (states world))
+            (when-not (some #(goal? world %) (states world))
               "world must contain at least one goal")
             (when-let [bad (seq (remove (partial in-bounds? world) (keys (:tiles world))))]
               (str "tile positions out of bounds: " (pr-str (vec bad))))
