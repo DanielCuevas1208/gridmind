@@ -1,0 +1,24 @@
+# Build output
+/target
+
+# Clojure CLI cache
+/.cpcache
+
+# Editor and tool caches
+/.clj-kondo
+/.cljstyle
+/.lsp
+/.nrepl-port
+/.prepl-port
+
+# IDE files
+/.idea
+/.vscode
+*.iml
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Logs
+*.log

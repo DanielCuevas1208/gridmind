@@ -1,0 +1,8 @@
+{:name "windy"
+ :rows 7
+ :cols 10
+ :start [3 0]
+ :tiles {:goal [[3 7]]}
+ :wind [0 0 0 1 1 1 2 2 1 0]
+ :rewards {:goal 1.0 :step -1.0}
+ :max-steps 1000}

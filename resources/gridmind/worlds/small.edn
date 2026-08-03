@@ -1,0 +1,8 @@
+{:name "small"
+ :rows 3
+ :cols 4
+ :start [0 0]
+ :tiles {:goal [[0 3]]
+         :hazard [[1 1]]}
+ :rewards {:goal 1.0 :hazard -1.0 :step -0.01}
+ :max-steps 100}

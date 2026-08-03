@@ -1,0 +1,7 @@
+{:paths ["src" "resources"]
+ :deps {org.clojure/clojure {:mvn/version "1.12.0"}}
+ :aliases
+ {:test {:extra-paths ["test" "dev"]
+         :main-opts ["-m" "gridmind.run-tests"]}
+  :demo {:extra-paths ["dev"]
+         :main-opts ["-m" "gridmind.demo"]}}}
