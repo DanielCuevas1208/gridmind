@@ -3,6 +3,7 @@
 
   Each world is loaded from an EDN file on the classpath. The files
   live under resources/gridmind/worlds."
+  (:refer-clojure :exclude [load])
   (:require [gridmind.world :as world]))
 
 (def small
